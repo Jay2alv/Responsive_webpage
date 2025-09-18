@@ -1,3 +1,15 @@
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        
         /* Base Styles */
         body {
             margin: 0;
@@ -19,8 +31,10 @@
         /* Mobile View */
         @media only screen and (max-width: 599px) {
             body {
-            background-color: lightblue; /* Blue */
+            animation: fadeIn 0.5s ease-in-out;
+                background-color: lightblue; /* Blue */
             }
+            .device-box {animation: fadeIn 0.5s ease-in-out;}
             .container::after {
             content: "Mobile Device";
             font-size: 1.5em;
@@ -31,8 +45,10 @@
         /* Tablet View */
         @media only screen and (min-width: 600px) and (max-width: 899px) {
             body {
+            animation: fadeIn 0.5s ease-in-out;
             background-color: lightgreen; /* Green */
             }
+            .device-box {animation: fadeIn 0.5s ease-in-out;}
             .container::after {
             content: "Tablet Device";
             color: white;
@@ -43,8 +59,10 @@
         /* Desktop View */
         @media only screen and (min-width: 900px) {
             body {
+            animation: fadeIn 0.5s ease-in-out;
             background-color: lightcoral; /* Red */
             }
+            .device-box {animation: fadeIn 0.5s ease-in-out;}
             .container::after {
             content: "Desktop Device";
             padding: 20px;
@@ -54,8 +72,10 @@
 
         @media only screen and (min-width:1200px) {
             body {
+                
                 background-color: purple;
             }
+            .device-box {animation: fadeIn 0.5s ease-in-out;}
             .container::after {
                 color: white;
             }
