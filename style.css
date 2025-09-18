@@ -1,0 +1,80 @@
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+        .container::after {
+            content: "Default View";
+            display: flex;
+            font-size: 2em;
+            text-align: center;
+            padding: 50px 0;
+            color: black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Mobile View */
+        @media only screen and (max-width: 599px) {
+            body {
+            background-color: lightblue; /* Blue */
+            }
+            .container::after {
+            content: "Mobile Device";
+            font-size: 1.5em;
+            color: white;
+            }
+        }
+
+        /* Tablet View */
+        @media only screen and (min-width: 600px) and (max-width: 899px) {
+            body {
+            background-color: lightgreen; /* Green */
+            }
+            .container::after {
+            content: "Tablet Device";
+            color: white;
+            }
+            .device-box {border: 5px dotted black;}
+        }
+
+        /* Desktop View */
+        @media only screen and (min-width: 900px) {
+            body {
+            background-color: lightcoral; /* Red */
+            }
+            .container::after {
+            content: "Desktop Device";
+            padding: 20px;
+            color: white;
+            }
+        }
+
+        @media only screen and (min-width:1200px) {
+            body {
+                background-color: purple;
+            }
+            .container::after {
+                color: white;
+            }
+        }
+        .device-box::after {
+        content: "Default";
+        display: block;
+        font-size: 2em;
+        text-align: center;
+        padding: 60px;
+        background-color: lightgray;
+        border: 3px solid black;
+        }
+
+        .device-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        
